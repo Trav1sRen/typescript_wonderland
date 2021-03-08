@@ -51,3 +51,10 @@ const funcObj: { [key: string]: (n: number) => number } = {
 console.log(pipe(3).double.pow.reverseInt.get); // 63
 
 // ****************************************************
+const proxy = new Proxy((left: number, right: number) => left + right, {
+    apply(func, ctx, args) {
+        // param ctx is 'this'
+        return Reflect.apply(func, ctx, args) * 2;
+    }
+});
+console.log(proxy(1, 3)); // 8
