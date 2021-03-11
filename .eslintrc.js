@@ -8,7 +8,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 2020,
-        sourveType: 'module'
+        sourceType: 'module'
     },
     plugins: ['@typescript-eslint', 'prettier'],
     rules: {
