@@ -1,7 +1,7 @@
 // async function returns a Promise object
 // await 意味着 等待一个Promise对象的状态变为resolved
 // consider 'await' as 'yield in Generator'
-// 'await' keyword won't RETURN any value for async function, only return keyword could
+// 'await' keyword won't RETURN any value for async function, only 'return' keyword could
 async function f1() {
     return 'hello world';
     // return Promise.resolve('hello world');
