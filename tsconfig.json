@@ -4,6 +4,7 @@
     "module": "commonjs",
     "downlevelIteration": true,
     "strict": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }
