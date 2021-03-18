@@ -1,7 +1,10 @@
 {
-  "name": "es6_new_features",
+  "name": "testcafe_demo",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "test_ui": "testcafe chrome tests/web_sample_test.ts",
+    "test_api": "testcafe chrome:headless tests/api_sample_test.ts"
+  },
   "author": "Travis Ren",
   "license": "ISC",
   "devDependencies": {
@@ -14,9 +17,16 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-testcafe": "^0.2.1",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/node-fetch": "^2.5.8",
+    "chai": "^4.3.4",
+    "node-fetch": "^2.6.1",
+    "testcafe": "^1.12.0"
+  }
 }
