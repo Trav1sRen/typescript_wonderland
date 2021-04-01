@@ -4,10 +4,6 @@
     "module": "commonjs",
     "downlevelIteration": true,
     "strict": true,
-    "types": [
-      "node",
-      "webdriverio/async"
-    ],
     "include": [
       "./test/**/*.ts",
       "./src/**/*.ts"
