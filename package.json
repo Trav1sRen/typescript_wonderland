@@ -1,5 +1,7 @@
 {
   "name": "appium_in_ts",
+  "description": "Boilerplate project for Webdriverio + Appium + Typescript",
+  "repository": "https://github.com/Trav1sRen/typescript_wonderland/tree/appium_in_ts",
   "version": "1.0.0",
   "scripts": {},
   "author": "Travis Ren",
@@ -20,6 +22,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-wdio": "^7.0.0",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
@@ -28,11 +31,12 @@
     "@types/chai": "^4.2.15",
     "@types/mocha": "^8.2.2",
     "@types/webdriverio": "^5.0.0",
-    "chai": "^4.3.4",
-    "mocha": "^8.3.2",
-    "webdriverio": "^7.3.0",
     "@wdio/allure-reporter": "^7.3.0",
     "@wdio/appium-service": "^7.3.0",
-    "@wdio/logger": "^7.0.0"
+    "@wdio/cli": "^7.3.0",
+    "@wdio/logger": "^7.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "webdriverio": "^7.3.0"
   }
 }
