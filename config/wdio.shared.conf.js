@@ -43,15 +43,15 @@ exports.config = {
         timeout: 90000
     },
 
-    onPrepare: function () {
+    onPrepare() {
         log.info('<<< Native App Testing Started >>>');
     },
 
-    afterScenario: function () {
+    afterScenario() {
         browser.screenshot();
     },
 
-    onComplete: function () {
+    onComplete() {
         log.info('<<< Testing Finished >>>');
     }
 };

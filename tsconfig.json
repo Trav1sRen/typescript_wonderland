@@ -3,6 +3,7 @@
     "target": "ES2020",
     "module": "commonjs",
     "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
     "moduleResolution": "node",
     "sourceMap": false,
@@ -11,7 +12,7 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "typeScript",
+    "outDir": "build",
     "typeRoots": [
       "./node_modules/@types"
     ],
