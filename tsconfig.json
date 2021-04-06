@@ -5,26 +5,21 @@
     "downlevelIteration": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "moduleResolution": "node",
-    "sourceMap": false,
-    "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
     "noImplicitAny": false,
-    "outDir": "build",
+    "include": [
+      "./test/**/*.ts",
+      "./src/**/*.ts"
+    ],
     "typeRoots": [
       "./node_modules/@types"
     ],
     "types": [
       "node",
       "mocha",
-      "webdriverio",
-      "chai"
-    ],
-    "include": [
-      "./test/**/*.ts",
-      "./src/**/*.ts"
+      "chai",
+      "webdriverio/async"
     ]
   }
 }
