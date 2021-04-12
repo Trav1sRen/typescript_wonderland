@@ -3,10 +3,23 @@
     "target": "ES2020",
     "module": "commonjs",
     "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
     "include": [
       "./test/**/*.ts",
       "./src/**/*.ts"
+    ],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "node",
+      "mocha",
+      "chai",
+      "webdriverio/async"
     ]
   }
 }

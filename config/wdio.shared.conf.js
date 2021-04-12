@@ -1,3 +1,6 @@
+const getLogger = require('@wdio/logger');
+export const log = getLogger('Taobao App Testing');
+
 const host = '127.0.0.1';
 const port = 4730;
 
@@ -38,5 +41,17 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 90000
+    },
+
+    onPrepare() {
+        log.info('<<< Native App Testing Started >>>');
+    },
+
+    afterScenario() {
+        browser.screenshot();
+    },
+
+    onComplete() {
+        log.info('<<< Testing Finished >>>');
     }
 };
