@@ -2,8 +2,7 @@
   "name": "testcafe_demo",
   "version": "1.0.0",
   "scripts": {
-    "test_ui": "testcafe chrome tests/web_sample_test.ts",
-    "test_api": "testcafe chrome:headless tests/api_sample_test.ts"
+    "test": "testcafe chrome tests/sample_test.ts"
   },
   "author": "Travis Ren",
   "license": "ISC",

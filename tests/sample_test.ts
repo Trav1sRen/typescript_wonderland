@@ -10,8 +10,9 @@ fixture('Search KeyWord In Google')
     });
 
 test('Search "TestCafe" in Google, it should return TestCafe home page in results', async (t: TestController) => {
-    await t.typeText(Selector('[name="q"]'), 'TestCafe');
-    await t.click(Selector('[type="submit"]'));
+    await t
+        .typeText(Selector('[name="q"]'), 'TestCafe')
+        .click(Selector('[type="submit"]'));
 
     // Verify page title here
     await t
@@ -37,7 +38,7 @@ test('Search "TestCafe" in Google, it should return TestCafe home page in result
                     url =>
                         arr.filter(href => href.indexOf(url) !== -1).length > 0
                 );
-            })('devexpress.github.io/testcafe/')
+            })('testcafe.io')
         )
         .eql(true);
 });
