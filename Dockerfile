@@ -9,4 +9,4 @@ RUN npm install
 
 WORKDIR /tests
 
-ENTRYPOINT testcafe $BROWSER_NAME:headless sample_test.ts --ts-config-path /tsconfig.json --page-load-timeout 30
+ENTRYPOINT testcafe $BROWSER_NAME:headless sample_test.ts --compiler-options typescript.configPath='/tsconfig.json' --page-load-timeout 60000 --assertion-timeout 10000
