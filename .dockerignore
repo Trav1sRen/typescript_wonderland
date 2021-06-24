@@ -1,0 +1,19 @@
+# Ignore node modules
+node_modules
+
+# Ignore yarn.lock file
+yarn.lock
+
+# Ignore .ignore files
+.dockerignore
+.gitignore
+
+# Ignore eslint config files
+.eslintrc.js
+.prettierrc.js
+
+# Ignore shell script for creating Docker container
+build_test.sh
+
+# Ignore Dockerfile
+Dockerfile

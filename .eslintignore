@@ -1,0 +1,3 @@
+# Ignore eslint config files
+.eslintrc.js
+.prettierrc.js
