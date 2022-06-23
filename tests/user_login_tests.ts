@@ -1,8 +1,11 @@
-import { SIM_TYPE } from '../enum/sim_type';
+import { SIM_TYPE_JP } from '../enum/sim_type';
+import { ClientJsHelper } from '../helper/client_js_helper';
 import { LoginFormObject } from '../pages/login_page/login_form';
 import { PlanDetailsMainBodyObject } from '../pages/plan_details_page/main_body';
+import { PlanSummaryObject } from '../pages/plan_details_page/plan_summary';
 import { DisplayPlansObject } from '../pages/plan_selection_page/display_plans';
 import { PlanSelectionPageHeaderObject } from '../pages/plan_selection_page/header';
+import { PlanSelectionPopUpObject } from '../pages/plan_selection_page/pop_up';
 
 fixture('Demo scenario for user login and plan selection')
   .page('https://uat1-onboarding.rmb-lab.jp/')
@@ -16,6 +19,10 @@ fixture('Demo scenario for user login and plan selection')
       pw: '#12345'
     });
     await loginForm.clickLoginBtn();
+  })
+  .afterEach(async () => {
+    const popUp = new PlanSelectionPopUpObject();
+    await popUp.checkSuccessPopup();
   });
 
 test('Select the plan and proceed to plan details', async () => {
@@ -23,5 +30,9 @@ test('Select the plan and proceed to plan details', async () => {
   await displayPlans.selectPlanByName('Rakuten UN-LIMIT VII');
 
   const planDetailsMainBody = new PlanDetailsMainBodyObject();
-  await planDetailsMainBody.changeSimType(SIM_TYPE.E_SIM);
+  await ClientJsHelper.checkPageRoute('/plan-details');
+  await planDetailsMainBody.changeSimType(SIM_TYPE_JP.E_SIM);
+
+  const planSummary = new PlanSummaryObject();
+  await planSummary.checkSimType(SIM_TYPE_JP.E_SIM);
 });
