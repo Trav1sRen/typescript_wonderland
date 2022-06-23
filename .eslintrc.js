@@ -10,8 +10,18 @@ module.exports = {
         ecmaVersion: 2020,
         sourceType: 'module'
     },
-    plugins: ['@typescript-eslint', 'prettier', 'testcafe'],
+    plugins: [
+        '@typescript-eslint',
+        'prettier',
+        'testcafe',
+        'import',
+        'node',
+        'promise'
+    ],
     rules: {
-        'prettier/prettier': 'error'
+        'prettier/prettier': 'error',
+        // Use tsconfig.json to detect unused vars
+        "no-unused-vars": 0,
+        '@typescript-eslint/no-unused-vars': 0
     }
 };

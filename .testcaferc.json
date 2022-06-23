@@ -1,4 +1,7 @@
 {
+  "src": [
+    "tests/user_login_tests.ts"
+  ],
   "pageLoadTimeout": 60000,
   "assertionTimeout": 5000,
   "selectorTimeout": 5000,

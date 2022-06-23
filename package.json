@@ -2,13 +2,14 @@
   "name": "testcafe_demo",
   "version": "1.0.0",
   "scripts": {
-    "test": "testcafe chrome tests/sample_test.ts"
+    "test": "testcafe chrome"
   },
   "author": "Travis Ren",
   "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
+    "chalk": "^5.0.1",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-standard": "^16.0.2",
@@ -22,6 +23,6 @@
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "testcafe": "^1.14.2"
+    "testcafe": "latest"
   }
 }
