@@ -11,7 +11,7 @@ export class PlanSummaryObject {
   }
 
   async checkSimType(simType: SIM_TYPE_JP) {
-    Logger.step(`Check SIM type on summary which displays ${simType}`);
+    Logger.step(`Check SIM type on summary which displays "${simType}"`);
 
     await t.expect(this.planSummaryElements.simType.innerText).eql(simType);
   }

@@ -19,13 +19,6 @@ fixture('Demo scenario for user login and plan selection')
       pw: '#12345'
     });
     await loginForm.clickLoginBtn();
-  })
-  .afterEach(async () => {
-    const planSummary = new PlanSummaryObject();
-    await planSummary.deleteSelectedPlan('Rakuten UN-LIMIT VII');
-
-    const popUp = new PlanSelectionPopUpObject();
-    await popUp.checkSuccessPopup();
   });
 
 test('Select the plan and proceed to plan details', async () => {
@@ -38,4 +31,8 @@ test('Select the plan and proceed to plan details', async () => {
 
   const planSummary = new PlanSummaryObject();
   await planSummary.checkSimType(SIM_TYPE_JP.E_SIM);
+  await planSummary.deleteSelectedPlan('Rakuten UN-LIMIT VII');
+
+  const popUp = new PlanSelectionPopUpObject();
+  await popUp.checkSuccessPopup();
 });

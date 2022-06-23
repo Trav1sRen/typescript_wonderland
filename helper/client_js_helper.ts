@@ -5,6 +5,8 @@ export class ClientJsHelper {
   static async checkPageRoute(route: string) {
     Logger.step(`Check page route conatins "${route}"`);
 
-    t.expect(ClientFunction(() => window.location.href)()).contains(route);
+    await t
+      .expect(ClientFunction(() => window.location.href)())
+      .contains(route);
   }
 }

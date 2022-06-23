@@ -6,5 +6,6 @@ export class DisplayPlansElements {
       .withExactText(planName)
       .parent('.main-plan')
       .nextSibling('.rktn-catalog-card-footer')
+      .nth(-1) // skip the invisible element
       .find('button.primary');
 }

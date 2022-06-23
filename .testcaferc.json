@@ -1,10 +1,13 @@
 {
-  "src": [
-    "tests/user_login_tests.ts"
-  ],
+  "src": ["tests/user_login_tests.ts"],
+  "compilerOptions": {
+    "typescript": {
+      "configPath": "./tsconfig.json"
+    }
+  },
   "pageLoadTimeout": 60000,
-  "assertionTimeout": 5000,
-  "selectorTimeout": 5000,
+  "assertionTimeout": 10000,
+  "selectorTimeout": 10000,
   "debugOnFail": true,
   "stopOnFirstFail": true
 }
