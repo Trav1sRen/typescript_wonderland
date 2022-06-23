@@ -7,6 +7,8 @@ import { DisplayPlansObject } from '../pages/plan_selection_page/display_plans';
 import { PlanSelectionPageHeaderObject } from '../pages/plan_selection_page/header';
 import { PlanSelectionPopUpObject } from '../pages/plan_selection_page/pop_up';
 
+const planSummary = new PlanSummaryObject();
+
 fixture('Demo scenario for user login and plan selection')
   .page('https://uat1-onboarding.rmb-lab.jp/')
   .beforeEach(async () => {
@@ -22,6 +24,8 @@ fixture('Demo scenario for user login and plan selection')
   })
   .afterEach(async () => {
     const popUp = new PlanSelectionPopUpObject();
+
+    await planSummary.deleteSelectedPlan('Rakuten UN-LIMIT VII');
     await popUp.checkSuccessPopup();
   });
 
@@ -32,7 +36,5 @@ test('Select the plan and proceed to plan details', async () => {
   const planDetailsMainBody = new PlanDetailsMainBodyObject();
   await ClientJsHelper.checkPageRoute('/plan-details');
   await planDetailsMainBody.changeSimType(SIM_TYPE_JP.E_SIM);
-
-  const planSummary = new PlanSummaryObject();
   await planSummary.checkSimType(SIM_TYPE_JP.E_SIM);
 });
